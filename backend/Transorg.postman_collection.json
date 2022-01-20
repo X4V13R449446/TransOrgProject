@@ -1,0 +1,221 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Transorg",
+		"_postman_id": "773b9927-01e5-5c85-e11d-c3fcff79c83f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add movie",
+			"request": {
+				"url": "{{url}}movies/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{header}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"lkfnn\",\n\t\"description\": \"Avengers movie\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List movie",
+			"request": {
+				"url": "{{url}}movies/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{header}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List theatre",
+			"request": {
+				"url": "{{url}}theatres/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{header}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add theatre",
+			"request": {
+				"url": {
+					"raw": "{{url}}theatres/",
+					"host": [
+						"{{url}}theatres"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"equals": false,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{header}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"ABJ4\",\n\t\"address\": \"Somewhere in Delhi\",\n\t\"movies\": [4,5,1]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Shows",
+			"request": {
+				"url": "{{url}}theatres/show/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{header}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"movie\": 5,\n\t\"theatre\": 1,\n\t\"total_available_seats\": 10,\n\t\"end_time\": \"15:00:00\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List Shows",
+			"request": {
+				"url": {
+					"raw": "{{url}}theatres/show/?movie=1&theatre=1",
+					"host": [
+						"{{url}}theatres"
+					],
+					"path": [
+						"show",
+						""
+					],
+					"query": [
+						{
+							"key": "movie",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "theatre",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{header}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "User orders",
+			"request": {
+				"url": "{{url}}orders/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{header}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "New Order",
+			"request": {
+				"url": "{{url}}orders/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{header}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"seat\": 2,\n\t\"show\": 6\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
